@@ -1,0 +1,1023 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff1f4,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe2ea,
+            transparent 35%
+        ),
+        #fff8fa;
+
+    color: #3d3034;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --pink: #d85a78;
+    --dark-pink: #b83e60;
+
+    --light-pink: #ffe9ef;
+
+    --cream: #fffaf5;
+
+    --text: #3d3034;
+
+    --muted: #806f75;
+}
+
+
+/* =========================
+   BACKGROUND HEARTS
+========================= */
+
+.background-hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(216, 90, 120, 0.2);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    z-index: 100;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: rotate(15deg) scale(1.08);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 30px;
+}
+
+.hero-content {
+    animation: fadeUp 1.2s ease;
+}
+
+.small-text {
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.big-heart {
+
+    font-size: 75px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.hero h1 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(70px, 12vw, 140px);
+
+    color: var(--pink);
+
+    line-height: 0.9;
+
+    margin-top: 10px;
+}
+
+.subtitle {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    color: var(--muted);
+
+    font-weight: 300;
+}
+
+.start-btn {
+
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: var(--pink);
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(216, 90, 120, 0.25);
+
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--dark-pink);
+
+    box-shadow:
+        0 15px 30px rgba(216, 90, 120, 0.3);
+}
+
+.start-btn span {
+    margin-left: 8px;
+}
+
+.scroll-text {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #a28d94;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    animation: float 2s infinite;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff8fa,
+            #fff0f4
+        );
+}
+
+.paper {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.96),
+            rgba(255,250,247,0.96)
+        );
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 25px 70px rgba(70, 35, 45, 0.12);
+
+    position: relative;
+}
+
+.paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border: 1px solid rgba(216, 90, 120, 0.15);
+
+    pointer-events: none;
+}
+
+.paper-decoration {
+
+    text-align: center;
+
+    color: var(--pink);
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.date {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #aa969c;
+}
+
+.paper h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 45px;
+
+    margin: 30px 0 20px;
+
+    color: var(--pink);
+}
+
+.paper p {
+
+    line-height: 1.9;
+
+    color: #64565b;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+}
+
+.typing-text {
+
+    min-height: 60px;
+}
+
+.signature {
+
+    margin-top: 35px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 27px;
+
+    color: #77636a;
+
+    text-align: right;
+}
+
+.signature span {
+
+    color: var(--pink);
+
+    font-size: 32px;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading span {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: var(--pink);
+
+    font-weight: 600;
+}
+
+.section-heading h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(45px, 7vw, 65px);
+
+    color: #44373c;
+
+    margin: 10px 0;
+}
+
+.section-heading p {
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+
+    padding: 110px 20px;
+
+    background: #fff;
+}
+
+.memory-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.memory-card {
+
+    background: #fff8fa;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(80, 40, 50, 0.08);
+
+    transition: 0.4s;
+}
+
+.memory-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(80, 40, 50, 0.13);
+}
+
+.photo {
+
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #f7dce4;
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.memory-card:hover .photo img {
+
+    transform: scale(1.06);
+}
+
+.memory-text {
+
+    padding: 25px;
+}
+
+.memory-text span {
+
+    color: var(--pink);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.memory-text h3 {
+
+    margin-top: 8px;
+
+    font-size: 20px;
+}
+
+.memory-text p {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons {
+
+    padding: 110px 20px;
+
+    background: #fff2f5;
+}
+
+.reason-grid {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.reason {
+
+    text-align: center;
+
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.65);
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.reason:hover {
+
+    transform: translateY(-5px);
+}
+
+.reason-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.reason h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.reason p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PROMISE
+========================= */
+
+.promise {
+
+    padding: 120px 20px;
+
+    background: #fff;
+
+    text-align: center;
+}
+
+.promise-box {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    border-top: 1px solid #efd5dc;
+
+    border-bottom: 1px solid #efd5dc;
+}
+
+.quote-mark {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 80px;
+
+    color: var(--pink);
+
+    line-height: 0.5;
+}
+
+.promise h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(40px, 6vw, 60px);
+
+    margin-top: 30px;
+}
+
+.promise p {
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+.line {
+
+    width: 50px;
+
+    height: 2px;
+
+    background: var(--pink);
+
+    margin: 30px auto;
+}
+
+.promise span {
+
+    font-size: 14px;
+
+    color: #8b747b;
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise {
+
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f4,
+            #ffe0e8
+        );
+
+    text-align: center;
+}
+
+.surprise-content {
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.gift {
+
+    font-size: 65px;
+
+    animation: float 2s infinite;
+}
+
+.surprise h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 55px;
+
+    margin-top: 20px;
+}
+
+.surprise p {
+
+    color: var(--muted);
+
+    margin-top: 10px;
+}
+
+.surprise button {
+
+    margin-top: 30px;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #3d3034;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.surprise button:hover {
+
+    transform: scale(1.05);
+
+    background: var(--pink);
+}
+
+.hidden-message {
+
+    display: none;
+
+    margin-top: 45px;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 20px;
+
+    animation: fadeUp 0.8s ease;
+}
+
+.hidden-message.show {
+    display: block;
+}
+
+.big-surprise-heart {
+
+    font-size: 55px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+.hidden-message h3 {
+
+    margin-top: 15px;
+
+    color: var(--pink);
+
+    font-family: "Caveat", cursive;
+
+    font-size: 35px;
+}
+
+.hidden-message p {
+
+    line-height: 1.8;
+
+    margin: 15px 0;
+}
+
+.hidden-message strong {
+
+    color: var(--dark-pink);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #3d3034;
+
+    color: #eee;
+}
+
+.footer-heart {
+
+    font-size: 30px;
+
+    color: #ff9db4;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+
+    font-size: 12px;
+
+    color: #c9b9be;
+}
+
+footer span {
+
+    display: block;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation: rise linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes rise {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .memory-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .reason-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .reason:last-child {
+
+        grid-column:
+            1 / -1;
+
+        max-width: 450px;
+
+        margin: auto;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        padding: 20px;
+    }
+
+    .small-text {
+
+        letter-spacing: 2px;
+
+        font-size: 10px;
+    }
+
+    .big-heart {
+
+        font-size: 60px;
+    }
+
+    .hero h1 {
+
+        font-size: 80px;
+    }
+
+    .subtitle {
+
+        font-size: 15px;
+    }
+
+    .paper {
+
+        padding: 40px 25px;
+    }
+
+    .paper::before {
+
+        inset: 10px;
+    }
+
+    .paper h2 {
+
+        font-size: 38px;
+    }
+
+    .paper p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .memory-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .reason-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .reason:last-child {
+
+        grid-column: auto;
+
+        max-width: none;
+    }
+
+    .photo {
+
+        height: 300px;
+    }
+
+    .promise-box {
+
+        padding: 45px 20px;
+    }
+
+    .music-btn {
+
+        width: 42px;
+
+        height: 42px;
+
+        top: 15px;
+
+        right: 15px;
+    }
+
+}
